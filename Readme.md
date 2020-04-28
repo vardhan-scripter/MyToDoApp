@@ -56,7 +56,7 @@
         ```
     * Example: 
 
-        ![Registration Page](./assets/1.png)
+        ![Registration Page](./API/assets/1.png)
 2. login
     * Details:
         ``` 
@@ -91,7 +91,7 @@
         ```
     * Example: 
     
-        ![Login Page](./assets/2.png)
+        ![Login Page](./API/assets/2.png)
 3. addItem
     * Details:
         ``` 
@@ -128,7 +128,7 @@
         ```
     * Example: 
 
-        ![AddItem Page](./assets/3.png)
+        ![AddItem Page](./API/assets/3.png)
 4. addDocument
     * Details:
         ``` 
@@ -175,7 +175,7 @@
         ```
     * Example: 
 
-        ![AddDocument Page](./assets/4.png)
+        ![AddDocument Page](./API/assets/4.png)
 5. getItems
     * Details:
         ``` 
@@ -219,7 +219,7 @@
         ```
     * Example: 
 
-        ![GetItems Page](./assets/5.png)
+        ![GetItems Page](./API/assets/5.png)
 6. getItem
     * Details:
         ``` 
@@ -261,7 +261,7 @@
         ```
     * Example: 
 
-        ![GetItem Page](./assets/6.png)
+        ![GetItem Page](./API/assets/6.png)
 7. updateItem
     * Details:
         ``` 
@@ -299,7 +299,7 @@
         ```
     * Example: 
 
-        ![UpdateItem Page](./assets/7.png)
+        ![UpdateItem Page](./API/assets/7.png)
 8. toggleItem
     * Details:
         ``` 
@@ -335,7 +335,7 @@
         ```
     * Example: 
 
-        ![ToggleItem Page](./assets/8.png)
+        ![ToggleItem Page](./API/assets/8.png)
 8. deleteItem
     * Details:
         ``` 
@@ -371,4 +371,4 @@
         ```
     * Example: 
 
-        ![DeleteItem Page](./assets/9.png)
+        ![DeleteItem Page](./API/assets/9.png)
