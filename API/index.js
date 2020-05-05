@@ -9,7 +9,6 @@ const auth = require("./api/routes/auth");
 const item = require("./api/routes/item");
 const passport = require("passport");
 
-
 // passport middleware
 app.use(passport.initialize());
 

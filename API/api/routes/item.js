@@ -19,13 +19,13 @@ router.post('/addItem',passport.authenticate("jwt", {session: false}),(req,res) 
         .save()
         .then(item => {
             if(!item) {
-                res.json({success: false, Errormessage: "Error in inserting item"})
+                res.json({success: false, message: "Error in inserting item"})
             }else{
-                res.json({success: true})
+                res.json({success: true, message: "Item added successfully"})
             }
         })
         .catch(err => {
-            res.json({success: false, Errormessage: "Internal server error"})
+            res.json({success: false, message: "Internal server error"})
         })
 })
 
@@ -38,13 +38,13 @@ router.post('/addDocument',passport.authenticate("jwt", {session: false}),(req,r
     Item.insertMany(req.body.items)
         .then(success => {
             if(!success) {
-                res.json({success: false, Errormessage: "Error in inserting document"})
+                res.json({success: false, message: "Error in inserting document"})
             }else{
-                res.json({success: true})
+                res.json({success: true, message: "Document added successfully"})
             }
         })
         .catch(err => {
-            res.json({success: false, Errormessage: err})
+            res.json({success: false, message: err})
         })
 })
 
@@ -57,13 +57,13 @@ router.get('/getItem/:id',passport.authenticate("jwt", {session: false}),(req,re
     Item.find({_id:req.params.id,email:req.user.email})
         .then(item => {
             if(!item) {
-                res.json({success: false, Errormessage: "No data found"})
+                res.json({success: false, message: "No data found"})
             }else{
-                res.json({success: true, item: item})
+                res.json({success: true,message: "Item found", item: item})
             }
         })
         .catch(err => {
-            res.json({success: false, Errormessage: "Internal server error"})
+            res.json({success: false, message: "Internal server error"})
         })
 })
 
@@ -76,9 +76,9 @@ router.get('/getItems',passport.authenticate("jwt", {session: false}),(req,res) 
     Item.find({email:req.user.email})
         .then(items => {
             if(!items) {
-                res.json({success: false, Errormessage: "No data found"})
+                res.json({success: false, message: "No data found"})
             }else{
-                res.json({success: true, items: items})
+                res.json({success: true, message: "Item list found",items: items})
             }
         })
         .catch(err => {
@@ -86,74 +86,74 @@ router.get('/getItems',passport.authenticate("jwt", {session: false}),(req,res) 
         })
 })
 
-//@type  POST
-//@route  /updateItem
+//@type  PUT
+//@route  /updateItem/:id
 //@desc  update item by id
 //@access PRIVATE
 
-router.post('/updateItem',passport.authenticate("jwt", {session: false}),(req,res) => {
+router.put('/updateItem/:id',passport.authenticate("jwt", {session: false}),(req,res) => {
     Item.findByIdAndUpdate(
-        {_id: req.body._id},
+        {_id: req.params.id},
         {
             name: req.body.name,
             description: req.body.description
         }
     ).then(success => {
         if(!success) {
-            res.json({success: false, Errormessage: "Error in updating item"})
+            res.json({success: false, message: "Error in updating item"})
         }else{
-            res.json({success: true})
+            res.json({success: true, message: "Item updated successfully"})
         } 
     }).catch(err => {
-        res.json({success: false, Errormessage: "Internal server error"})
+        res.json({success: false, message: "Internal server error"})
     })
 })
 
-//@type  POST
-//@route  /toggleItem
+//@type  PUT
+//@route  /toggleItem/:id
 //@desc  update item by id
 //@access PRIVATE
 
-router.post('/toggleItem',passport.authenticate("jwt", {session: false}),(req,res) => {
-    Item.findById(req.body._id)
+router.put('/toggleItem/:id',passport.authenticate("jwt", {session: false}),(req,res) => {
+    Item.findById(req.params.id)
         .then(item => {
             const toggle = item.done ? false:true;
             Item.findByIdAndUpdate(
-                {_id: req.body._id},
+                {_id: req.params.id},
                 {
                     done: toggle
                 }
             ).then(success => {
                 if(!success) {
-                    res.json({success: false, Errormessage: "Error in updating item"})
+                    res.json({success: false, message: "Error in updating item"})
                 }else{
                     res.json({success: true})
                 } 
             }).catch(err => {
-                res.json({success: false, Errormessage: "Internal server error"})
+                res.json({success: false, message: "Internal server error"})
             })
         })
         .catch(err => {
-            res.json({success: false, Errormessage: "Internal server error"})
+            res.json({success: false, message: "Internal server error"})
         })
 })
 
 //@type  DELETE
-//@route  /deleteItem
+//@route  /deleteItem/:id
 //@desc  delete item by id
 //@access PRIVATE
 
-router.delete('/deleteItem',passport.authenticate("jwt", {session: false}),(req,res) => {
-    Item.findByIdAndDelete(req.body._id)
+router.delete('/deleteItem/:id',passport.authenticate("jwt", {session: false}),(req,res) => {
+    Item.findByIdAndDelete(req.params.id)
         .then(success => {
             if(!success) {
-                res.json({success: false, Errormessage: "Error in deleting item"})
+                res.json({success: false, message: "Error in deleting item"})
             }else{
-                res.json({success: true})
+                res.json({success: true, message: "Item deleted successfully"})
             } 
         })
         .catch(err => {
-            res.json({success: false, Errormessage: "Internal server error"})
+            res.json({success: false, message: "Internal server error"})
         })
 })
 

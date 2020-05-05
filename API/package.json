@@ -12,11 +12,13 @@
   "author": "V-Scripter",
   "license": "ISC",
   "dependencies": {
+    "@sendgrid/mail": "^7.1.0",
     "bcryptjs": "^2.4.3",
     "body-parser": "^1.19.0",
     "express": "^4.17.1",
     "jsonwebtoken": "^8.5.1",
     "mongoose": "^5.9.10",
+    "nodemailer": "^6.4.6",
     "nodemon": "^2.0.3",
     "passport": "^0.4.1",
     "passport-jwt": "^4.0.0"
