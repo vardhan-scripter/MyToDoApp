@@ -9,18 +9,24 @@ A new Flutter Todey application.
 
 login page |sign up page | forgotpassword page
 :-------------------------:|:-------------------------:|:-------------------------:
-<img src="appscreenshots/loginpage.jpeg" alt="List of Tasks Screen" width="220" height="400"> | <img src="appscreenshots/signuppage.jpeg" alt="List of Tasks Screen" width="220" height="400">  | <img src="appscreenshots/forgotpasswordpage.jpeg" alt="List of Tasks Screen" width="220" height="400">
+<img src="appscreenshots/loginpage.jpeg" alt="loginpage" width="220" height="400"> | <img src="appscreenshots/signuppage.jpeg" alt="signuppage" width="220" height="400">  | <img src="appscreenshots/forgotpasswordpage.jpeg" alt="forgotpasswordpage" width="220" height="400">
  click on the login button <br> to login <br> click on the signup to create account|click on the signup button to create account<br>click on the signin to go back | click on verify button to verify <br> and to get verification code
 
- reset password page |home page | create todo page |update todo page 
-:-------------------------:|:-------------------------:|:-------------------------:|:------:
-<img src="appscreenshots/resetpasswordpage.jpeg" alt="resetpasswordpage" width="220" height="400"> | <img src="appscreenshots/homepage.jpeg" alt="homepage" width="220" height="400">  | <img src="appscreenshots/createtodopage.jpeg" alt="createtodopage" width="220" height="400">|<img src="appscreenshots/updatetodopage.jpeg" alt="updatetodopage" width="220" height="400">
- click on the update button <br> to update password <br> click on the bo back to come back |click on the signup button to create account<br>click on the signin to go back | click on verify button to verify <br> and to get verification code|click on the card to update<br>the todo  
+ reset password page |home page | create todo page  
+:-------------------------:|:-------------------------:|:-------------------------:
+<img src="appscreenshots/resetpasswordpage.jpeg" alt="resetpasswordpage" width="220" height="400"> | <img src="appscreenshots/homepage.jpeg" alt="homepage" width="220" height="400">  | <img src="appscreenshots/createtodopage.jpeg" alt="createtodopage" width="220" height="400">
+ click on the update button <br> to update password <br> click on the bo back to come back | click on Edit button to create <br> new Todo| click on save button to save <br> new Todo 
 
- update todo page |logout alert  | delete todo alert|exit the app
-:-------------------------:|:-------------------------:|:-------------------------:|:------------------:
-<img src="appscreenshots/updatehomepage.jpeg" alt="updatehomepage" width="220" height="400"> | <img src="appscreenshots/logoutalert.jpeg" alt="logoutalert" width="220" height="400">  | <img src="appscreenshots/deletealert.jpeg" alt="deletealert" width="220" height="400"> |<img src="appscreenshots/exitappalert.jpeg" alt="updatetodopage" width="220" height="400">
- ||click on the exit chip to logout| click on the cancel icon to delete todo | press on the system back button to exit app
+ update todo page |update home page|logout alert 
+ :-------------------------:|:------------------:|:---------------:
+<img src="appscreenshots/updatetodopage.jpeg" alt="updatetodopage" width="220" height="400">|<img src="appscreenshots/updatehomepage.jpeg" alt="updatehomepage" width="220" height="400"> | <img src="appscreenshots/logoutalert.jpeg" alt="logoutalert" width="220" height="400">  
+ |click on the card to update<br>the todo||click on the exit chip to logout|
+
+delete todo alert|exit the app alert
+:-------------------------:|:-------------------------:|
+ <img src="appscreenshots/deletealert.jpeg" alt="deletealert" width="220" height="400"> |<img src="appscreenshots/exitappalert.jpeg" alt="updatetodopage" width="220" height="400">
+  click on the cancel icon to delete todo | press on the system back button to exit app
+
 
 ##### Install the app,test yourself and feel free to comment
 [apk](apks/app.apk) link
